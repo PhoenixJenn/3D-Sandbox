@@ -5,7 +5,7 @@ using UnityEngine;
 public class Character 
 {
     public string name;
-    public int exp;
+    public int exp = 0;
 
    
     public Character() {
@@ -16,9 +16,15 @@ public class Character
     {
         name = newName;
     }
- 
 
+    public void PrintStatsInfo()
+    {
+        Debug.Log("Character:" + name + "; Exp:" + exp);
+
+    }
 }
+
+// structs passed by value vs classes passed by ref
 public struct Weapon
 {
     public string name;
@@ -30,10 +36,7 @@ public struct Weapon
         this.damage = damage;
 
     }
-    public void PrintStatsInfo() {
-        Debug.Log("Character:" + name + "; Damage:" + damage);
-        
-    }
+   
     public void PrintWeaponStats()
     {
         Debug.LogFormat("Weapon:{0} - {1} DMB", name, damage);

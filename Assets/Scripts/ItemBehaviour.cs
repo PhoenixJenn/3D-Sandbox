@@ -14,12 +14,8 @@ public class ItemBehaviour : MonoBehaviour
         if (collision.gameObject.name == "PlayerCapsule") {
             //Destroy(this.transform.parent.gameObject); //if HealthPickup was a child of 'ITEM' Gameobject
             //make sure contains
-            if (playerScript.itemInventory.ContainsKey("Power Up")){
-                playerScript.itemInventory["Power Up"] += 1;
-                Debug.Log(playerScript.itemInventory["Power Up"]);
-            }
+            playerScript.CollectItem("Power Up", 1);
             
-
 
             Destroy(this.transform.gameObject);
 

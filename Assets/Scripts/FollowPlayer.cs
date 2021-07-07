@@ -6,7 +6,7 @@ public class FollowPlayer : MonoBehaviour
 {
 
     public GameObject player;
-    private Vector3 offset = new Vector3(4,2,0);
+    private Vector3 offset = new Vector3(8,3,0);
     
     // LateUpdate is good for camera movement because it is called once/frame after Update has finished
     void LateUpdate()
